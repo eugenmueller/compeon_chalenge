@@ -2,9 +2,9 @@
 
 Hallo Zusammen,
 
-Morgens läuft die suche nach Lösugen eindeutig besser. ;)
+Morgens läuft die Suche nach Lösugen eindeutig besser. ;)
 
-Ich habe den chalenge code in eine Klasse gepackt, um es besser Testen zu können.
+Ich habe den chalenge Code in eine Klasse gepackt, um es besser testen zu können.
 
 Viele Grüße
 Eugen 
