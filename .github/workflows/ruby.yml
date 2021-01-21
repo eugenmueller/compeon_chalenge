@@ -32,4 +32,4 @@ jobs:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run tests
-      run: ruby sms_messsenger_test.rb
+      run: ruby ./sms_messsenger_test.rb
