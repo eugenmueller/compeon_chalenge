@@ -10,13 +10,17 @@ class SmsMessenger
 
   # You need to fix this method, currently it will crash with > 160 char messages.
   def send_sms_message(text, to, from)
-    chunck_array = split_message_into_chuncks(text) # split text into chuncks with a character length < 160
-    total_pages = calculate_total_pages(text) # calculate total pages
+    if text.length < 160 # if message in shorter than 160 characters send it immediately
+      deliver_message_via_carrier(text, to, from)
+    else
+      chunck_array = split_message_into_chuncks(text) # split text into chuncks with a character length < 160
+      total_pages = calculate_total_pages(text) # calculate total pages
 
-    chunck_array.each_with_index do |chunck, i|
-      message_chunck_to_send = compose_message(chunck, i+1, total_pages) # compose messsage to send
+      chunck_array.each_with_index do |chunck, i|
+        message_chunck_to_send = compose_message(chunck, i+1, total_pages) # compose messsage to send
 
-      deliver_message_via_carrier(message_chunck_to_send, to, from)
+        deliver_message_via_carrier(message_chunck_to_send, to, from)
+      end
     end
   end
 
