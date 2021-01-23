@@ -12,4 +12,4 @@ Eugen
 
 So hab es nochmal überarbeitet.
 
-Am Wochenende hatte ich etwas mehr Zeit, um mir um die Aufgabenstellung Gedanken zu machen.
+Am Wochenende hatte ich etwas mehr Zeit, um mir um die Aufgabenstellung mehr Gedanken zu machen.
