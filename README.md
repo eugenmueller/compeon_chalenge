@@ -8,3 +8,8 @@ Ich habe den chalenge Code in eine Klasse gepackt, um es besser testen zu könne
 
 Viele Grüße
 Eugen 
+
+
+So hab es nochmal überarbeitet.
+
+Am Wochenende hatte ich etwas mehr Zeit, um mir um die Aufgabenstellung Gedanken zu machen.
