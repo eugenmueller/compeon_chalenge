@@ -10,7 +10,7 @@ class SmsMessage < Message
   end
 
   # split message and avoid spliting words to improve readability of the multipart messages.  
-  def split_message_into_multipart_chunks_readable
+  def split_message_into_readable_multipart_chunks
     @message.length < 160 ? [@message] : compose_words_to_multipart_message_array
   end
 
