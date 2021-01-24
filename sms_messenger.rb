@@ -14,7 +14,10 @@ class SmsMessenger
   def send_sms_message(text, to, from)
     sms_message = SmsMessage.new(text)
     
-    sms_message.split_message_into_mulitpart_chuncks.each { |part| deliver_message_via_carrier(part, to, from) }
+    # It is more sophisticated to split the message and keep words undivided. 
+    # More suitable for this purpose is the split_message_into_multipart_chunks_readable function.
+    
+    sms_message.split_message_into_mulitpart_chunks.each { |part| deliver_message_via_carrier(part, to, from) }
   end
 
   # This method actually sends the message via a SMS carrier

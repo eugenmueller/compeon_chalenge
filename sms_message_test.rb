@@ -13,10 +13,16 @@ class SmsMessageTest < Test::Unit::TestCase
     @subject_3 = SmsMessage.new(TEST_MESSAGE_3)
   end
 
-  def test_split_message_into_mulitpart_chuncks
-    assert_equal 4, @subject_1.split_message_into_mulitpart_chuncks.length, "it should return the expected chunck count"
-    assert_equal 4100, @subject_2.split_message_into_mulitpart_chuncks.length, "it should return the expected chunck count"
-    assert_equal 1, @subject_3.split_message_into_mulitpart_chuncks.length, "it should return the expected chunck count"
+  def test_split_message_into_mulitpart_chunks
+    assert_equal 4, @subject_1.split_message_into_mulitpart_chunks.length, "it should return the expected chunk count"
+    assert_equal 4100, @subject_2.split_message_into_mulitpart_chunks.length, "it should return the expected chunk count"
+    assert_equal 1, @subject_3.split_message_into_mulitpart_chunks.length, "it should return the expected chunk count"
+  end
+
+  def test_split_message_into_multipart_chunks_readable
+    assert_equal 4, @subject_1.split_message_into_multipart_chunks_readable.length, "it should return the expected word chunk count"
+    assert_equal 4223, @subject_2.split_message_into_multipart_chunks_readable.length, "it should return the expected word chunk count"
+    assert_equal 1, @subject_3.split_message_into_multipart_chunks_readable.length, "it should return the expected word chunk count"
   end
 
 end
