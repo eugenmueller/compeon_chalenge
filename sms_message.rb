@@ -7,12 +7,12 @@ class SmsMessage < Message
 
   # split message into chunks with suffix
   def split_message_into_mulitpart_chunks
-    @message.length < 160 ? [@message] : compose_chunks_to_multipart_message_array
+    @message.length < MAX_SENDABEL_MESSAGE_LENGTH ? [@message] : compose_chunks_to_multipart_message_array
   end
 
   # split message and avoid spliting words to improve readability of the multipart messages.
   def split_message_into_readable_multipart_chunks
-    @message.length < 160 ? [@message] : compose_words_to_multipart_message_array
+    @message.length < MAX_SENDABEL_MESSAGE_LENGTH ? [@message] : compose_words_to_multipart_message_array
   end
 
   private
