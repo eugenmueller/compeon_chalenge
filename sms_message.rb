@@ -31,7 +31,7 @@ class SmsMessage < Message
   def compose_words_to_chunk_array
     chunk_array = []
     chunk = ''
-    split_messsage_to_words_array.each do |word|
+    split_message_to_words_array.each do |word|
       # check if the future chunk is smaller then calculated chunk length
       if (chunk.length + word.length) < calculate_current_chunk_length
         chunk << "#{word} "
@@ -43,8 +43,8 @@ class SmsMessage < Message
     chunk_array << chunk
   end
 
-  def split_messsage_to_words_array
-    @split_messsage_to_words_array ||= @message.split(' ')
+  def split_message_to_words_array
+    @split_message_to_words_array ||= @message.split(' ')
   end
 
   def calculate_total_pages
